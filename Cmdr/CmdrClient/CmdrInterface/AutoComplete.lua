@@ -104,12 +104,11 @@ return function (Cmdr)
 			local btn = AutoItem:Clone()
 			btn.Name = leftText .. rightText
 			btn.BackgroundTransparency = i == self.SelectedItem and 0.5 or 1
-			btn.Typed.Text = leftText
-			btn.Suggest.Text = string.rep(" ", #leftText) .. rightText:sub(#leftText + 1)
+			btn.Typed.Text = leftText .. "<font color='rgb(255,255,255)'>" .. rightText:sub(#leftText + 1) .. "</font>"
 			btn.Parent = Gui
 			btn.LayoutOrder = i
 
-			local maxBounds = math.max(btn.Typed.TextBounds.X, btn.Suggest.TextBounds.X) + 20
+			local maxBounds = btn.Typed.TextBounds.X + 20
 			if maxBounds > autocompleteWidth then
 				autocompleteWidth = maxBounds
 			end
