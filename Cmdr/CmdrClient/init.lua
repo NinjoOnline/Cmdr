@@ -1,3 +1,4 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
 local StarterGui = game:GetService("StarterGui")
 local Players = game:GetService("Players")
@@ -39,8 +40,8 @@ local Cmdr do
 	Cmdr.Dispatcher = require(Shared.Dispatcher)(Cmdr)
 end
 
-if StarterGui:WaitForChild("Cmdr") and wait() and Player:WaitForChild("PlayerGui"):FindFirstChild("Cmdr") == nil then
-	StarterGui.Cmdr:Clone().Parent = Player.PlayerGui
+if ReplicatedStorage:WaitForChild("Cmdr") and task.wait() and Player:WaitForChild("PlayerGui"):FindFirstChild("Cmdr") == nil then
+	ReplicatedStorage.Cmdr.Parent = Player.PlayerGui
 end
 
 local Interface = require(script.CmdrInterface)(Cmdr)

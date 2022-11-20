@@ -41,7 +41,7 @@ return function (cmdr)
 	script.Parent.BuiltInTypes:Destroy()
 	script.Parent.BuiltInCommands.Name = "Server commands"
 
-	if StarterGui:FindFirstChild("Cmdr") == nil then
+	if ReplicatedStorage:FindFirstChild("Cmdr") == nil then
 		CreateGui()
 	end
 end
