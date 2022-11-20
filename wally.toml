@@ -1,5 +1,5 @@
 [package]
-name = "evaera/cmdr"
+name = "ninjoonline/cmdr"
 description = "Extensible command console for Roblox developers"
 version = "1.9.0"
 license = "MIT"
