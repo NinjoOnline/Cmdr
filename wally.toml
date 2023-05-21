@@ -1,5 +1,5 @@
 [package]
-name = "ninjoonline/Cmdr"
+name = "ninjoonline/cmdr"
 description = "Extensible command console for Roblox developers"
 version = "1.9.3"
 license = "MIT"
